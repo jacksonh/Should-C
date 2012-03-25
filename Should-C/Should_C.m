@@ -12,6 +12,54 @@
 
 @implementation Test
 
++ (void) int:(int) i shouldBeLessThan:(int) other
+{
+    return [self number:[NSNumber numberWithInt:i] shouldBeLessThan:[NSNumber numberWithInt:other]];
+}
+
++ (void) int:(int) i shouldBeLessthanOrEqualTo:(int) other
+{
+    return [self number:[NSNumber numberWithInt:i] shouldBeLessThanOrEqualTo:[NSNumber numberWithInt:other]];
+}
+
++ (void) long:(long) l shouldBeLessThan:(long) other
+{
+    return [self number:[NSNumber numberWithLong:l] shouldBeLessThan:[NSNumber numberWithLong:other]];
+}
+
++ (void) long:(long) l shouldBeLessthanOrEqualTo:(long) other
+{
+    return [self number:[NSNumber numberWithLong:l] shouldBeLessThanOrEqualTo:[NSNumber numberWithLong:other]];
+}
+
++ (void) double:(double) d shouldBeLessThan:(double) other
+{
+    return [self number:[NSNumber numberWithDouble:d] shouldBeLessThan:[NSNumber numberWithDouble:other]];
+}
+
++ (void) double:(double) d shouldBeLessthanOrEqualTo:(double) other
+{
+    return [self number:[NSNumber numberWithDouble:d] shouldBeLessThanOrEqualTo:[NSNumber numberWithDouble:other]];
+}
+
++ (void) number:(NSNumber *) n shouldBeLessThan:(NSNumber *) other
+{
+    NSComparisonResult result = [n compare:other];    
+    if (result == NSOrderedAscending)
+        return;
+    [NSException raise:@"ShouldCException" format:@"'%@' is not less than '%@'.", n, other];
+}
+
++ (void) number:(NSNumber *) n shouldBeLessThanOrEqualTo:(NSNumber *) other
+{
+    NSComparisonResult result = [n compare:other];    
+    if (result == NSOrderedAscending || result == NSOrderedSame)
+        return;
+    [NSException raise:@"ShouldCException" format:@"'%@' is not less than or equal to '%@'.", n, other];
+}
+
+
+
 + (void) int:(int)i shouldEqual:(int)other
 {
     if (i != other)
@@ -48,87 +96,6 @@
 
 @implementation Should_CTestCase : SenTestCase
 
-+ (void) Test:(id) obj shouldBe:(id) other
-{
-    
-}
-
-- (void) shouldNotBeNil:(id) obj
-{
-    if (!obj)
-        [NSException raise:@"ShouldCException" format:@"object is nil."];
-}
-
-- (void) int:(int) i shouldBeEqualTo:(int) other;
-{
-    if (i != other)
-        [NSException raise:@"ShouldCException" format:@"'%d' does not equal other int '%d'.", i, other];
-}
-
-- (void) shouldFail:(void (^)(void))expression
-{
-    BOOL failed = NO;
-    @try {
-        expression ();
-    }
-    @catch (id exc) {
-        failed = YES;
-    }
-    
-    if (!failed)
-        [NSException raise:@"ShouldCException" format:@"Expression did not fail."];
-}
-
-+ (void) test:(id)obj shouldEqual:(id) other
-{
-    if (!([obj respondsToSelector:@selector(isEqual:)]))
-        [NSException raise:@"ShouldCException" format:@"'%@' does not respond to isEqual.", obj];
-        
-    if (![obj isEqual:other])
-        [NSException raise:@"ShouldCException" format:@"'%@' does not equal other object '%@'.", obj, other];
-}
-
 @end
 
 
-@implementation NSObject (Should_C)
-
-- (void) shouldEqual:(NSObject *) other
-{
-    if (![self isEqual:other])
-        [NSException raise:@"ShouldCException" format:@"'%@' does not equal other object '%@'.", self, other];
-}
-
-- (void) shouldNotEqual:(NSObject *) other
-{
-    if ([self isEqual:other])
-        [NSException raise:@"ShouldCException" format:@"'%@' equals other object '%@'.", self, other];
-
-}
-
-@end
-
-
-
-@implementation NSString (Should_C) 
-
-- (void) shouldContain:(NSString *) other;
-{
-    if ([self rangeOfString:other].location == NSNotFound)
-        [NSException raise:@"ShouldCException" format:@"'%@' does not contain string '%@'.", self, other];
-}
-
-- (void) shouldStartWith:(NSString *) other
-{
-    if (![self hasPrefix:other])
-        [NSException raise:@"ShouldCException" format:@"'%@' does not start with string '%@'.", self, other];
-}
-
-- (void) shouldEndWith:(NSString *)other
-{
-    if (![self hasPrefix:other])
-        [NSException raise:@"ShouldCException" format:@"'%@' does not end with string '%@'.", self, other];
-}
-
-
-@end

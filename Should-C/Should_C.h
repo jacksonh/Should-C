@@ -11,8 +11,35 @@
 
 @interface Test : NSObject 
 
++ (void) int:(int) i shouldBeLessThan:(int) other;
++ (void) int:(int) i shouldBeLessthanOrEqualTo:(int) other;
++ (void) long:(long) l shouldBeLessThan:(long) other;
++ (void) long:(long) l shouldBeLessthanOrEqualTo:(long) other;
++ (void) double:(double) d shouldBeLessThan:(double) other;
++ (void) double:(double) d shouldBeLessthanOrEqualTo:(double) other;
++ (void) number:(NSNumber *) n shouldBeLessThan:(NSNumber *) other;
++ (void) number:(NSNumber *) n shouldBeLessThanOrEqualTo:(NSNumber *) other;
+
++ (void) int:(int) i shouldBeGreaterThan:(int) other;
++ (void) int:(int) i shouldBeGreaterThanOrEqualTo:(int) other;
++ (void) long:(long) l shouldBeGreaterThan:(long) other;
++ (void) long:(long) l shouldBeGreaterThanOrEqualTo:(long) other;
++ (void) double:(double) d shouldBeGreaterThan:(double) other;
++ (void) double:(double) d shouldBeGreaterThanOrEqualTo:(double) other;
++ (void) number:(NSNumber *) n shouldBeGreaterThan:(NSNumber *) other;
++ (void) number:(NSNumber *) n shouldBeGreaterThanOrEqualTo:(NSNumber *) other;
+
 + (void) int:(int) i shouldEqual:(int) other;
++ (void) long:(long) l shouldEqual:(long) other;
++ (void) double:(double) d shouldEqual:(double) other;
++ (void) number:(NSNumber *) n shouldEqual:(NSNumber *) other;
 + (void) object:(id) obj shouldEqual:(id) other;
+
++ (void) int:(int) i shouldNotEqual:(int) other;
++ (void) long:(long) l shouldNotEqual:(long) other;
++ (void) double:(double) d shouldNotEqual:(double) other;
++ (void) number:(NSNumber *) n shouldNotEqual:(NSNumber *) other;
++ (void) object:(id) obj shouldNotEqual:(id) other;
 
 + (void) shouldFail:(void (^)(void)) expression;
 
@@ -21,48 +48,6 @@
 
 @interface Should_CTestCase : SenTestCase
 
-- (void) shouldNotBeNil:(id) object;
-
-- (void) int:(int) i shouldBeEqualTo:(int) other;
-
-- (void) shouldFail:(void (^)(void)) expression;
 
 @end
 
-
-/*
- I like using categories for this, but there is a fundamental problem.
- Because [nil <message>] is basically a noop, things like:
- [<a string set to nil> shouldEqual:@"foobar"] will not fail and:
- [@"foobar" shouldEqual:<a string set to nil>] does not read nicely.
- */
-@interface NSObject (Should_C)
-
-- (void) shouldEqual:(NSObject *) other;
-- (void) shouldNotEqual:(NSObject *) other;
-
-@end
-
-
-@interface NSString (Should_C) 
-
-- (void) shouldContain:(NSString *) other;
-- (void) shouldStartWith:(NSString *) other;
-- (void) shouldEndWith:(NSString *)other;
-
-@end
-
-
-/*
- Need to think about how to handle numbers best...
- 
-@interface NSNumber (Should_C)
-
-- (void) shouldBeLessThan:(NSNumber *) other;
-- (void) shouldBeLessthanOrEqualTo:(NSNumber *) other;
-
-- (void) shouldBeGreaterThan:(NSNumber *) other;
-- (void) shouldBeGreaterThanOrEqualTo:(NSNumber *) other;
-
-@end
-*/

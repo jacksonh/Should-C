@@ -14,16 +14,68 @@
 - (void)setUp
 {
     [super setUp];
-    
-    // Set-up code here.
 }
 
 - (void)tearDown
-{
-    // Tear-down code here.
-    
+{    
     [super tearDown];
 }
+
+- (void) test_numberShouldBeLessThanOrEqual_twoIdenticalInts_shouldNotFail
+{
+    NSNumber *left = [NSNumber numberWithInt:25];
+    NSNumber *right = [NSNumber numberWithInt:25];
+    
+    [Test number:left shouldBeLessThanOrEqualTo:right];
+}
+
+- (void) test_numberShouldBeLessThanOrEqual_leftIntIsLessThanRightInt_shouldNotFail
+{
+    NSNumber *left = [NSNumber numberWithInt:24];
+    NSNumber *right = [NSNumber numberWithInt:25];
+    
+    [Test number:left shouldBeLessThanOrEqualTo:right];
+}
+
+- (void) test_numberShouldBeLessThanOrEqual_leftIntGreaterThanRightInt_shouldFail
+{
+    NSNumber *left = [NSNumber numberWithInt:26];
+    NSNumber *right = [NSNumber numberWithInt:25];
+    
+    [Test shouldFail:^{
+        [Test number:left shouldBeLessThanOrEqualTo:right];
+    }];
+}
+
+- (void) test_numberShouldBeLessThan_twoIdenticalInts_shouldFail
+{
+    NSNumber *left = [NSNumber numberWithInt:25];
+    NSNumber *right = [NSNumber numberWithInt:25];
+    
+    [Test shouldFail:^{
+        [Test number:left shouldBeLessThan:right];
+    }];
+}
+
+- (void) test_numberShouldBeLessThan_leftIntIsLessThanRightInt_shouldNotFail
+{
+    NSNumber *left = [NSNumber numberWithInt:24];
+    NSNumber *right = [NSNumber numberWithInt:25];
+    
+    [Test number:left shouldBeLessThan:right];
+}
+
+- (void) test_numberShouldBeLessThan_leftIntGreaterThanRightInt_shouldFail
+{
+    NSNumber *left = [NSNumber numberWithInt:26];
+    NSNumber *right = [NSNumber numberWithInt:25];
+    
+    [Test shouldFail:^{
+        [Test number:left shouldBeLessThan:right];
+    }];
+}
+
+
 
 - (void) test_intShouldEqual_twoIdenticalInts_shouldNotFail
 {
@@ -57,48 +109,6 @@
     
     [Test shouldFail:^{
         [Test object:left shouldEqual:right];
-    }];
-}
-
-- (void) test_intShouldEqual_intsThatAreEqual_shouldNotFail
-{
-    int a = 25;
-    int b = 25;
-    
-    [self int:a shouldBeEqualTo:b];
-}
-
-- (void) test_shouldEqual_theSameString_shouldNotFail
-{
-    NSString *string_one = @"i am string";
-    
-    [string_one shouldEqual:string_one];
-}
-
-- (void) test_shouldEqual_stringsThatAreEqual_shouldNotFail
-{
-    NSString *string_one = @"i am string";
-    NSString *string_two = @"i am string";
-    
-    [string_one shouldEqual:string_two];
-}
-
-- (void) test_shouldEqual_stringsThatAreNotEqual_shouldFail
-{
-    NSString *string_one = @"i am string one";
-    NSString *string_two = @"i am string two";
-    
-    [self shouldFail:^{ 
-        [string_one shouldEqual:string_two];
-    }];
-}
-
-- (void) test_shouldEqual_theOtherStringIsNil_shouldFail
-{
-    NSString *string_one = @"i am string";
-    
-    [self shouldFail:^{ 
-        [string_one shouldEqual:nil];
     }];
 }
 
