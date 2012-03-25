@@ -15,6 +15,8 @@
 		7ABB6557151EC1D4005A4F3E /* libShould-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABB653F151EC1D4005A4F3E /* libShould-C.a */; };
 		7ABB655D151EC1D4005A4F3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB655B151EC1D4005A4F3E /* InfoPlist.strings */; };
 		7ABB6560151EC1D4005A4F3E /* Should_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB655F151EC1D4005A4F3E /* Should_CTests.m */; };
+		7ABB656B151F6471005A4F3E /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABB656A151F6471005A4F3E /* libobjc.dylib */; };
+		7ABB656C151F648C005A4F3E /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABB656A151F6471005A4F3E /* libobjc.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 		7ABB655C151EC1D4005A4F3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7ABB655E151EC1D4005A4F3E /* Should_CTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Should_CTests.h; sourceTree = "<group>"; };
 		7ABB655F151EC1D4005A4F3E /* Should_CTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Should_CTests.m; sourceTree = "<group>"; };
+		7ABB656A151F6471005A4F3E /* libobjc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.dylib; path = usr/lib/libobjc.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABB656B151F6471005A4F3E /* libobjc.dylib in Frameworks */,
 				7ABB6543151EC1D4005A4F3E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABB656C151F648C005A4F3E /* libobjc.dylib in Frameworks */,
 				7ABB6551151EC1D4005A4F3E /* SenTestingKit.framework in Frameworks */,
 				7ABB6553151EC1D4005A4F3E /* UIKit.framework in Frameworks */,
 				7ABB6554151EC1D4005A4F3E /* Foundation.framework in Frameworks */,
@@ -68,6 +73,7 @@
 		7ABB6534151EC1D4005A4F3E = {
 			isa = PBXGroup;
 			children = (
+				7ABB656A151F6471005A4F3E /* libobjc.dylib */,
 				7ABB6544151EC1D4005A4F3E /* Should-C */,
 				7ABB6558151EC1D4005A4F3E /* Should-CTests */,
 				7ABB6541151EC1D4005A4F3E /* Frameworks */,

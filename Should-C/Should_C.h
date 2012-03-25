@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <SenTestingKit/SenTestingKit.h>
 
+@interface Test : NSObject 
+
++ (void) object:(id) obj shouldEqual:(id) other;
+
++ (void) shouldFail:(void (^)(void)) expression;
+
+@end
+
+
 @interface Should_CTestCase : SenTestCase
 
 - (void) shouldNotBeNil:(id) object;
@@ -16,6 +25,7 @@
 - (void) int:(int) i shouldBeEqualTo:(int) other;
 
 - (void) shouldFail:(void (^)(void)) expression;
+
 @end
 
 

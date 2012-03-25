@@ -25,6 +25,16 @@
     [super tearDown];
 }
 
+- (void) test_shouldEqual_objectIsNilOtherIsNot_shouldFail
+{
+    NSString *left = nil;
+    NSString *right = @"i am string";
+    
+    [Test shouldFail:^{
+        [Test object:left shouldEqual:right];
+    }];
+}
+
 - (void) test_intShouldEqual_intsThatAreEqual_shouldNotFail
 {
     int a = 25;

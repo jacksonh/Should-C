@@ -7,8 +7,45 @@
 //
 
 #import "Should_C.h"
+#import <objc/runtime.h>
+
+
+@implementation Test
+
++ (void) object:(id) obj shouldEqual:(id) other
+{
+    if (!([obj respondsToSelector:@selector(isEqual:)]))
+        [NSException raise:@"ShouldCException" format:@"'%@' does not respond to isEqual.", obj];
+    
+    if (![obj isEqual:other])
+        [NSException raise:@"ShouldCException" format:@"'%@' does not equal other object '%@'.", obj, other];
+}
+
++ (void) shouldFail:(void (^)(void))expression
+{
+    BOOL failed = NO;
+    @try {
+        expression ();
+    }
+    @catch (id exc) {
+        failed = YES;
+    }
+    
+    if (!failed)
+        [NSException raise:@"ShouldCException" format:@"Expression did not fail."]; 
+}
+
+@end
+
+
+
 
 @implementation Should_CTestCase : SenTestCase
+
++ (void) Test:(id) obj shouldBe:(id) other
+{
+    
+}
 
 - (void) shouldNotBeNil:(id) obj
 {
@@ -34,6 +71,15 @@
     
     if (!failed)
         [NSException raise:@"ShouldCException" format:@"Expression did not fail."];
+}
+
++ (void) test:(id)obj shouldEqual:(id) other
+{
+    if (!([obj respondsToSelector:@selector(isEqual:)]))
+        [NSException raise:@"ShouldCException" format:@"'%@' does not respond to isEqual.", obj];
+        
+    if (![obj isEqual:other])
+        [NSException raise:@"ShouldCException" format:@"'%@' does not equal other object '%@'.", obj, other];
 }
 
 @end
