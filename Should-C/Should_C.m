@@ -17,7 +17,7 @@
     return [self number:[NSNumber numberWithInt:i] shouldBeLessThan:[NSNumber numberWithInt:other]];
 }
 
-+ (void) int:(int) i shouldBeLessthanOrEqualTo:(int) other
++ (void) int:(int) i shouldBeLessThanOrEqualTo:(int) other
 {
     return [self number:[NSNumber numberWithInt:i] shouldBeLessThanOrEqualTo:[NSNumber numberWithInt:other]];
 }
@@ -27,7 +27,7 @@
     return [self number:[NSNumber numberWithLong:l] shouldBeLessThan:[NSNumber numberWithLong:other]];
 }
 
-+ (void) long:(long) l shouldBeLessthanOrEqualTo:(long) other
++ (void) long:(long) l shouldBeLessThanOrEqualTo:(long) other
 {
     return [self number:[NSNumber numberWithLong:l] shouldBeLessThanOrEqualTo:[NSNumber numberWithLong:other]];
 }
@@ -37,7 +37,7 @@
     return [self number:[NSNumber numberWithDouble:d] shouldBeLessThan:[NSNumber numberWithDouble:other]];
 }
 
-+ (void) double:(double) d shouldBeLessthanOrEqualTo:(double) other
++ (void) double:(double) d shouldBeLessThanOrEqualTo:(double) other
 {
     return [self number:[NSNumber numberWithDouble:d] shouldBeLessThanOrEqualTo:[NSNumber numberWithDouble:other]];
 }

@@ -12,11 +12,11 @@
 @interface Test : NSObject 
 
 + (void) int:(int) i shouldBeLessThan:(int) other;
-+ (void) int:(int) i shouldBeLessthanOrEqualTo:(int) other;
++ (void) int:(int) i shouldBeLessThanOrEqualTo:(int) other;
 + (void) long:(long) l shouldBeLessThan:(long) other;
-+ (void) long:(long) l shouldBeLessthanOrEqualTo:(long) other;
++ (void) long:(long) l shouldBeLessThanOrEqualTo:(long) other;
 + (void) double:(double) d shouldBeLessThan:(double) other;
-+ (void) double:(double) d shouldBeLessthanOrEqualTo:(double) other;
++ (void) double:(double) d shouldBeLessThanOrEqualTo:(double) other;
 + (void) number:(NSNumber *) n shouldBeLessThan:(NSNumber *) other;
 + (void) number:(NSNumber *) n shouldBeLessThanOrEqualTo:(NSNumber *) other;
 
