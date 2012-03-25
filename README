@@ -25,7 +25,7 @@ A basic test looks like this:
 	    }];
 	}
 
-	- (void) test_intShouldEqual_objectIsNilOtherIsNot_shouldFail
+	- (void) test_somethingThatReturnsAnInt_shouldFail
 	{
 	    int i = [<something that returns an int>];
 	    int expected = 55;
