@@ -7,7 +7,7 @@ I'm not in love with any of this API yet, I just want to start playing around an
 
 A basic test looks like this:
 
-	- (void) test_shouldEqual_twoIdenticalStrings_shouldNotFail
+	- (void) test_objectShouldEqual_twoIdenticalStrings_shouldNotFail
 	{
 	    NSString *left = @"i am string;
 	    NSString *right = @"i am string";
@@ -15,12 +15,22 @@ A basic test looks like this:
 	    [Test object:left shouldEqual:right];
 	}
 
-	- (void) test_shouldEqual_objectIsNilOtherIsNot_shouldFail
+	- (void) test_objectShouldEqual_objectIsNilOtherIsNot_shouldFail
 	{
 	    NSString *left = nil;
 	    NSString *right = @"i am string";
 	    
 	    [Test shouldFail:^{
 	        [Test object:left shouldEqual:right];
+	    }];
+	}
+
+	- (void) test_intShouldEqual_objectIsNilOtherIsNot_shouldFail
+	{
+	    int i = [<something that returns an int>];
+	    int expected = 55;
+	    
+	    [Test shouldFail:^{
+	        [Test int:i shouldEqual:expected];
 	    }];
 	}
