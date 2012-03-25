@@ -25,6 +25,31 @@
     [super tearDown];
 }
 
+- (void) test_intShouldEqual_twoIdenticalInts_shouldNotFail
+{
+    int left = 25;
+    int right = 25;
+    
+    [Test int:left shouldEqual:right]; 
+}
+
+- (void) test_intShouldEqual_theSameInt_shouldNotFail
+{
+    int left = 25;
+    
+    [Test int:left shouldEqual:left]; 
+}
+
+- (void) test_intShouldEqual_twoDifferentInts_shouldFail
+{
+    int left = 25;
+    int right = 26;
+    
+    [Test shouldFail:^{
+        [Test int:left shouldEqual:right];
+    }];
+}
+
 - (void) test_shouldEqual_objectIsNilOtherIsNot_shouldFail
 {
     NSString *left = nil;

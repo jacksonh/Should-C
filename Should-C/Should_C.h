@@ -11,6 +11,7 @@
 
 @interface Test : NSObject 
 
++ (void) int:(int) i shouldEqual:(int) other;
 + (void) object:(id) obj shouldEqual:(id) other;
 
 + (void) shouldFail:(void (^)(void)) expression;

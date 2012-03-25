@@ -12,6 +12,12 @@
 
 @implementation Test
 
++ (void) int:(int)i shouldEqual:(int)other
+{
+    if (i != other)
+        [NSException raise:@"ShouldCException" format:@"'%d' does not equal other int '%d'.", i, other];
+}
+
 + (void) object:(id) obj shouldEqual:(id) other
 {
     if (!([obj respondsToSelector:@selector(isEqual:)]))
