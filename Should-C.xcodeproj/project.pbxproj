@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7ABB6543151EC1D4005A4F3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABB6542151EC1D4005A4F3E /* Foundation.framework */; };
+		7ABB6549151EC1D4005A4F3E /* Should_C.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB6548151EC1D4005A4F3E /* Should_C.m */; };
+		7ABB6551151EC1D4005A4F3E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABB6550151EC1D4005A4F3E /* SenTestingKit.framework */; };
+		7ABB6553151EC1D4005A4F3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABB6552151EC1D4005A4F3E /* UIKit.framework */; };
+		7ABB6554151EC1D4005A4F3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABB6542151EC1D4005A4F3E /* Foundation.framework */; };
+		7ABB6557151EC1D4005A4F3E /* libShould-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABB653F151EC1D4005A4F3E /* libShould-C.a */; };
+		7ABB655D151EC1D4005A4F3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB655B151EC1D4005A4F3E /* InfoPlist.strings */; };
+		7ABB6560151EC1D4005A4F3E /* Should_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB655F151EC1D4005A4F3E /* Should_CTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7ABB6555151EC1D4005A4F3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ABB6536151EC1D4005A4F3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7ABB653E151EC1D4005A4F3E;
+			remoteInfo = "Should-C";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7ABB653F151EC1D4005A4F3E /* libShould-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libShould-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ABB6542151EC1D4005A4F3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7ABB6546151EC1D4005A4F3E /* Should-C-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Should-C-Prefix.pch"; sourceTree = "<group>"; };
+		7ABB6547151EC1D4005A4F3E /* Should_C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Should_C.h; sourceTree = "<group>"; };
+		7ABB6548151EC1D4005A4F3E /* Should_C.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Should_C.m; sourceTree = "<group>"; };
+		7ABB654F151EC1D4005A4F3E /* Should-CTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Should-CTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ABB6550151EC1D4005A4F3E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7ABB6552151EC1D4005A4F3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7ABB655A151EC1D4005A4F3E /* Should-CTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Should-CTests-Info.plist"; sourceTree = "<group>"; };
+		7ABB655C151EC1D4005A4F3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7ABB655E151EC1D4005A4F3E /* Should_CTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Should_CTests.h; sourceTree = "<group>"; };
+		7ABB655F151EC1D4005A4F3E /* Should_CTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Should_CTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7ABB653C151EC1D4005A4F3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ABB6543151EC1D4005A4F3E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ABB654B151EC1D4005A4F3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ABB6551151EC1D4005A4F3E /* SenTestingKit.framework in Frameworks */,
+				7ABB6553151EC1D4005A4F3E /* UIKit.framework in Frameworks */,
+				7ABB6554151EC1D4005A4F3E /* Foundation.framework in Frameworks */,
+				7ABB6557151EC1D4005A4F3E /* libShould-C.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7ABB6534151EC1D4005A4F3E = {
+			isa = PBXGroup;
+			children = (
+				7ABB6544151EC1D4005A4F3E /* Should-C */,
+				7ABB6558151EC1D4005A4F3E /* Should-CTests */,
+				7ABB6541151EC1D4005A4F3E /* Frameworks */,
+				7ABB6540151EC1D4005A4F3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7ABB6540151EC1D4005A4F3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7ABB653F151EC1D4005A4F3E /* libShould-C.a */,
+				7ABB654F151EC1D4005A4F3E /* Should-CTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7ABB6541151EC1D4005A4F3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ABB6542151EC1D4005A4F3E /* Foundation.framework */,
+				7ABB6550151EC1D4005A4F3E /* SenTestingKit.framework */,
+				7ABB6552151EC1D4005A4F3E /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ABB6544151EC1D4005A4F3E /* Should-C */ = {
+			isa = PBXGroup;
+			children = (
+				7ABB6547151EC1D4005A4F3E /* Should_C.h */,
+				7ABB6548151EC1D4005A4F3E /* Should_C.m */,
+				7ABB6545151EC1D4005A4F3E /* Supporting Files */,
+			);
+			path = "Should-C";
+			sourceTree = "<group>";
+		};
+		7ABB6545151EC1D4005A4F3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ABB6546151EC1D4005A4F3E /* Should-C-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7ABB6558151EC1D4005A4F3E /* Should-CTests */ = {
+			isa = PBXGroup;
+			children = (
+				7ABB655E151EC1D4005A4F3E /* Should_CTests.h */,
+				7ABB655F151EC1D4005A4F3E /* Should_CTests.m */,
+				7ABB6559151EC1D4005A4F3E /* Supporting Files */,
+			);
+			path = "Should-CTests";
+			sourceTree = "<group>";
+		};
+		7ABB6559151EC1D4005A4F3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ABB655A151EC1D4005A4F3E /* Should-CTests-Info.plist */,
+				7ABB655B151EC1D4005A4F3E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7ABB653D151EC1D4005A4F3E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7ABB653E151EC1D4005A4F3E /* Should-C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ABB6563151EC1D4005A4F3E /* Build configuration list for PBXNativeTarget "Should-C" */;
+			buildPhases = (
+				7ABB653B151EC1D4005A4F3E /* Sources */,
+				7ABB653C151EC1D4005A4F3E /* Frameworks */,
+				7ABB653D151EC1D4005A4F3E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Should-C";
+			productName = "Should-C";
+			productReference = 7ABB653F151EC1D4005A4F3E /* libShould-C.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7ABB654E151EC1D4005A4F3E /* Should-CTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ABB6566151EC1D4005A4F3E /* Build configuration list for PBXNativeTarget "Should-CTests" */;
+			buildPhases = (
+				7ABB654A151EC1D4005A4F3E /* Sources */,
+				7ABB654B151EC1D4005A4F3E /* Frameworks */,
+				7ABB654C151EC1D4005A4F3E /* Resources */,
+				7ABB654D151EC1D4005A4F3E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7ABB6556151EC1D4005A4F3E /* PBXTargetDependency */,
+			);
+			name = "Should-CTests";
+			productName = "Should-CTests";
+			productReference = 7ABB654F151EC1D4005A4F3E /* Should-CTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7ABB6536151EC1D4005A4F3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = myself;
+			};
+			buildConfigurationList = 7ABB6539151EC1D4005A4F3E /* Build configuration list for PBXProject "Should-C" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7ABB6534151EC1D4005A4F3E;
+			productRefGroup = 7ABB6540151EC1D4005A4F3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7ABB653E151EC1D4005A4F3E /* Should-C */,
+				7ABB654E151EC1D4005A4F3E /* Should-CTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7ABB654C151EC1D4005A4F3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ABB655D151EC1D4005A4F3E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7ABB654D151EC1D4005A4F3E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7ABB653B151EC1D4005A4F3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ABB6549151EC1D4005A4F3E /* Should_C.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ABB654A151EC1D4005A4F3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ABB6560151EC1D4005A4F3E /* Should_CTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7ABB6556151EC1D4005A4F3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7ABB653E151EC1D4005A4F3E /* Should-C */;
+			targetProxy = 7ABB6555151EC1D4005A4F3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7ABB655B151EC1D4005A4F3E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ABB655C151EC1D4005A4F3E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7ABB6561151EC1D4005A4F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7ABB6562151EC1D4005A4F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7ABB6564151EC1D4005A4F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Should_C.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Should-C/Should-C-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7ABB6565151EC1D4005A4F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Should_C.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Should-C/Should-C-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7ABB6567151EC1D4005A4F3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libShould-C.a";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Should-C/Should-C-Prefix.pch";
+				INFOPLIST_FILE = "Should-CTests/Should-CTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7ABB6568151EC1D4005A4F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libShould-C.a";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Should-C/Should-C-Prefix.pch";
+				INFOPLIST_FILE = "Should-CTests/Should-CTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7ABB6539151EC1D4005A4F3E /* Build configuration list for PBXProject "Should-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ABB6561151EC1D4005A4F3E /* Debug */,
+				7ABB6562151EC1D4005A4F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7ABB6563151EC1D4005A4F3E /* Build configuration list for PBXNativeTarget "Should-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ABB6564151EC1D4005A4F3E /* Debug */,
+				7ABB6565151EC1D4005A4F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7ABB6566151EC1D4005A4F3E /* Build configuration list for PBXNativeTarget "Should-CTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ABB6567151EC1D4005A4F3E /* Debug */,
+				7ABB6568151EC1D4005A4F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7ABB6536151EC1D4005A4F3E /* Project object */;
+}

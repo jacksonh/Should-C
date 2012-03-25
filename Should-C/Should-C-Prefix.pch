@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Should-C' target in the 'Should-C' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

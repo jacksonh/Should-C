@@ -1,0 +1,7 @@
+
+For now I am just playing around with some ideas for improving the Objective-C unit testing experience.
+
+I do like the Shouldly framework for .NET, so I used those symantics as a starting point.
+
+I'm not in love with any of this API yet, I just want to start playing around and hope I come up with something that works.
+
