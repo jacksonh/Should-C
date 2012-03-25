@@ -22,7 +22,8 @@
 /*
  I like using categories for this, but there is a fundamental problem.
  Because [nil <message>] is basically a noop, things like:
- [<a string set to nil> shouldEqual:@"foobar"] will not fail.
+ [<a string set to nil> shouldEqual:@"foobar"] will not fail and:
+ [@"foobar" shouldEqual:<a string set to nil>] does not read nicely.
  */
 @interface NSObject (Should_C)
 
