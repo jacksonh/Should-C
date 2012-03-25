@@ -5,3 +5,22 @@ I do like the Shouldly framework for .NET, so I used those symantics as a starti
 
 I'm not in love with any of this API yet, I just want to start playing around and hope I come up with something that works.
 
+A basic test looks like this:
+
+	- (void) test_shouldEqual_twoIdenticalStrings_shouldNotFail
+	{
+	    NSString *left = @"i am string;
+	    NSString *right = @"i am string";
+	    
+	    [Test object:left shouldEqual:right];
+	}
+
+	- (void) test_shouldEqual_objectIsNilOtherIsNot_shouldFail
+	{
+	    NSString *left = nil;
+	    NSString *right = @"i am string";
+	    
+	    [Test shouldFail:^{
+	        [Test object:left shouldEqual:right];
+	    }];
+	}
