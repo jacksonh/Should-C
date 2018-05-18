@@ -7,7 +7,7 @@ I'm not in love with any of this API yet, I just want to start playing around an
 
 A basic test looks like this:
 
-```
+
 	- (void) test_objectShouldEqual_twoIdenticalStrings_shouldNotFail
 	{
 	    NSString *left = @"i am string;
@@ -35,4 +35,4 @@ A basic test looks like this:
 	        [Test int:i shouldEqual:expected];
 	    }];
 	}
-```
+
